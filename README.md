@@ -1,4 +1,5 @@
 # CS Blog and Updates Scraper
+Get Blog and Update posts from CSGO
 ### Usage:
 ```ts
 import { getBlogPosts, getUpdatePosts } from "csblogscraper";
