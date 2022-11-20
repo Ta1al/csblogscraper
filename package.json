@@ -1,6 +1,6 @@
 {
   "name": "csblogscraper",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -16,7 +16,7 @@
     "postversion": "git push && git push --tags"
   },
   "files": [
-    "lib/**/*"
+    "dist/**/*"
   ],
   "keywords": [
     "nodejs",
