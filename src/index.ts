@@ -47,7 +47,7 @@ export default async function getPosts (url: string): Promise<Post[]> {
       const post = $(el)
       const title = post.find('h2').find('a').text()
       const link = post.find('h2').find('a').attr('href')!
-      const date = new Date(post.find('p').filter('.post_date').text().split(' ')[0])
+      const date = new Date(post.find('p').filter('.post_date').text().split(' ')[0]!)
       const image =
             post.find('img').length > 1
               ? post.find('img').eq(1).attr('src')!
