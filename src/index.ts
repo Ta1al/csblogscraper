@@ -40,9 +40,9 @@ export default async function getPosts (url: string): Promise<Post[]> {
   const buffer = Buffer.from(data)
   const $ = load(buffer)
   const postContainer = $.root().find('#post_container')
-  const posts = postContainer
-    .children()
-    .filter('.inner_post')
+  const innerPosts = postContainer.children().filter('.inner_post')
+  if (innerPosts.first().find('h2').text().toLowerCase() === 'bad link?') { throw new Error('No posts found') }
+  const posts = innerPosts
     .map((_, el) => {
       const post = $(el)
       const title = post.find('h2').find('a').text()
