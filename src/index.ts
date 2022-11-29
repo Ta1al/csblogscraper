@@ -68,6 +68,6 @@ export interface Post {
   title: string
   link: string
   date: Date
-  image: string
+  image?: string
   content: string
 }
