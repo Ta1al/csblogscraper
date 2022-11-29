@@ -19,7 +19,7 @@ interface Post {
   title: string;
   url: string;
   date: Date;
-  image: string;
+  image?: string;
   content: string;
 }
 ```
