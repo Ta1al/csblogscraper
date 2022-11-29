@@ -18,7 +18,8 @@ const posts = await getPosts("https://blog.counter-strike.net/");
 interface Post {
   title: string;
   url: string;
-  date: string;
+  date: Date;
+  image: string;
   content: string;
 }
 ```
