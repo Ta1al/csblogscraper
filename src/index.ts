@@ -14,7 +14,7 @@ const urls = {
  */
 export async function getBlogPosts (index: number = 0): Promise<Post[]> {
   let url = urls.blog
-  ;(Boolean(index)) && (url += `index.php/page/${index}/`)
+  Boolean(index) && (url += `index.php/page/${index}/`)
   return await getPosts(url)
 }
 
@@ -25,7 +25,7 @@ export async function getBlogPosts (index: number = 0): Promise<Post[]> {
  */
 export async function getUpdatePosts (index: number = 0): Promise<Post[]> {
   let url = urls.updates
-  ;(Boolean(index)) && (url += `page/${index}/`)
+  Boolean(index) && (url += `page/${index}/`)
   return await getPosts(url)
 }
 
